@@ -2,7 +2,7 @@ func printAge(name: String) {
     print("\(name) is 29")
 }
 
-printAge("Adam")
+printAge(name: "Adam")
 
 
 func happyBirthday(age: Int) {
@@ -23,15 +23,15 @@ func badGetAge(name: String) -> Int {
 
 
 let friend = "Emily"
-var friendAge = getAge(friend)
-happyBirthday(friendAge)
+var friendAge = getAge(name: friend)
+happyBirthday(age: friendAge)
 
 
 func birthdayGreeting(age: Int) -> String {
     return "Happy birthday #\(age)!"
 }
 
-var greeting = birthdayGreeting(30)
+var greeting = birthdayGreeting(age: 30)
 print(greeting)
 
 
@@ -42,4 +42,67 @@ func getAgeAndCongratulate(name: String) -> Int {
 }
 
 let friend2 = "Pete"
-var friend2Age = getAgeAndCongratulate(friend2)
+var friend2Age = getAgeAndCongratulate(name: friend2)
+
+
+//let bestName: String = "Gandalf"
+//let bestNumber: Int = 5
+//let bestDecNumber: Double = 99.2
+
+let bestName: String
+let bestNumber: Int
+let bestDecNumber: Double
+
+//func sleep(){
+
+ //print("Zzzzzz")
+    
+//}
+
+//() -> Void ' No Argument function and Returns back nothing
+
+func sleep(at time: String)
+{
+    print("3. Sleep Function has been called")
+    print("Go to sleep at \(time)")
+
+}
+
+// (String) -> Void 
+sleep(at:"9:00p")
+
+
+
+func blah (bloop: String, baskds: Int) -> Double
+{
+    
+    return 1.1
+}
+
+// (String, Int) -> Double
+
+
+func perform(action: (String) -> Void)
+{
+
+    print("2. Perform Function Called ")
+    action("Bread")
+    
+
+}
+
+print("1. About to call on perfom")
+perform(action: sleep)
+
+
+// Function Types
+
+func greet(_ human: String)
+{
+    
+    print("Hello \(human)")
+}
+
+greet("dfdfd")
+
+
